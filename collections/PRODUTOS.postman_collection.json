@@ -31,7 +31,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/produtos/3",
+					"raw": "http://localhost:8000/api/produtos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,7 +40,7 @@
 					"path": [
 						"api",
 						"produtos",
-						"3"
+						"1"
 					]
 				}
 			},
@@ -52,7 +52,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/produtos?nome=Blusa&cor=Azul&tamanho=M&valor=17",
+					"raw": "http://localhost:8000/api/produtos?nome=Blusa 1&cor=Vermelha&tamanho=GG&valor=32.50",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -65,19 +65,50 @@
 					"query": [
 						{
 							"key": "nome",
-							"value": "Blusa"
+							"value": "Blusa 1"
 						},
 						{
 							"key": "cor",
-							"value": "Azul"
+							"value": "Vermelha"
 						},
 						{
 							"key": "tamanho",
-							"value": "M"
+							"value": "GG"
 						},
 						{
 							"key": "valor",
-							"value": "17"
+							"value": "32.50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/produtos/1?nome=Blusa&valor=13.25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Blusa"
+						},
+						{
+							"key": "valor",
+							"value": "13.25"
 						}
 					]
 				}
@@ -100,33 +131,6 @@
 						"api",
 						"produtos",
 						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "PUT",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/produtos/2?nome=Blusa",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"produtos",
-						"2"
-					],
-					"query": [
-						{
-							"key": "nome",
-							"value": "Blusa"
-						}
 					]
 				}
 			},

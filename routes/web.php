@@ -1,18 +1,22 @@
 <?php
 
+use App\Mail\newVipMail;
+use App\Models\Pedido;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('pedidos/{id}/sendmail',  function($id){
+    $pedido = Pedido::with('cliente')->with('pedido_produto')->findOrFail($id);
+    Mail::send( new newVipMail($pedido));
+});
+
+
+Route::get('pedidos/{id}/report',  function($id){
+    $pedido = Pedido::with('cliente')->with('pedido_produto')->findOrFail($id);
+
+     view()->share('bodyMail',['pedido' => $pedido]);
+    $pdf = \PDF::loadView('bodyMail', ['pedido' => $pedido]);
+    return $pdf->stream();
 });

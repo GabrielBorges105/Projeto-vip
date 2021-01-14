@@ -15,6 +15,7 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('cliente_id')->constrained();
             $table->date('data');
             $table->longText('observacao');
             $table->enum('pagamento', array('dinheiro', 'cartão', 'cheque'));

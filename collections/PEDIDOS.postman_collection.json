@@ -52,7 +52,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/pedidos?data=2020-01-14&observacao=Teste 3&pagamento=1",
+					"raw": "http://localhost:8000/api/pedidos?cliente_id=3&data=2020-01-14&observacao=Comprando pela primeira vez&pagamento=2&produtos[]=1&quantidades[]=4&produtos[]=2&quantidades[]=3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -64,17 +64,134 @@
 					],
 					"query": [
 						{
+							"key": "cliente_id",
+							"value": "3"
+						},
+						{
 							"key": "data",
 							"value": "2020-01-14"
 						},
 						{
 							"key": "observacao",
-							"value": "Teste 3"
+							"value": "Comprando pela primeira vez"
 						},
 						{
 							"key": "pagamento",
+							"value": "2"
+						},
+						{
+							"key": "produtos[]",
 							"value": "1"
+						},
+						{
+							"key": "quantidades[]",
+							"value": "4"
+						},
+						{
+							"key": "produtos[]",
+							"value": "2"
+						},
+						{
+							"key": "quantidades[]",
+							"value": "3"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pedidos/1?cliente_id=1&data=2020-01-14&observacao=Teste 3 att&pagamento=3&produtos[]=1&quantidades[]=3&produtos[]=2&quantidades[]=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pedidos",
+						"1"
+					],
+					"query": [
+						{
+							"key": "cliente_id",
+							"value": "1"
+						},
+						{
+							"key": "data",
+							"value": "2020-01-14"
+						},
+						{
+							"key": "observacao",
+							"value": "Teste 3 att"
+						},
+						{
+							"key": "pagamento",
+							"value": "3"
+						},
+						{
+							"key": "produtos[]",
+							"value": "1"
+						},
+						{
+							"key": "quantidades[]",
+							"value": "3"
+						},
+						{
+							"key": "produtos[]",
+							"value": "2"
+						},
+						{
+							"key": "quantidades[]",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SENDMAIL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/pedidos/1/sendmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pedidos",
+						"1",
+						"sendmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/pedidos/1/report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pedidos",
+						"1",
+						"report"
 					]
 				}
 			},
@@ -96,72 +213,6 @@
 						"api",
 						"pedidos",
 						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "PUT",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/pedidos/3?data=2021-01-14&observacao=teste",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"pedidos",
-						"3"
-					],
-					"query": [
-						{
-							"key": "data",
-							"value": "2021-01-14"
-						},
-						{
-							"key": "observacao",
-							"value": "teste"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ADD PRODUTOS",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/pedidos/produtos?pedido_id=1&produto_id=1&quantidade=1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"pedidos",
-						"produtos"
-					],
-					"query": [
-						{
-							"key": "pedido_id",
-							"value": "1"
-						},
-						{
-							"key": "produto_id",
-							"value": "1"
-						},
-						{
-							"key": "quantidade",
-							"value": "1"
-						}
 					]
 				}
 			},

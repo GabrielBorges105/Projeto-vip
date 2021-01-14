@@ -24,6 +24,7 @@ Tabela de conteúdos
 
 * Primeiramente verifique se você possui os seguintes requisitos:
     * PHP 7.2.5+
+    * Composer
     * Laravel
     * Mysql
 
@@ -39,14 +40,18 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
     ```bash
     git clone <https://github.com/GabrielBorges105/Projeto-vip>
     ```
+
+* Abra o Xampp e inicie o MYSQL
+
 * Crie um banco de dados com o nome "db_vip", caso queira personalizar informe-o também no arquivo .env
+
+* Preencha todas as informações de email no arquivo .env para que funcione o envio de email para os clientes.
 
 * Pelo terminal vá até a raiz do projeto e execute:
     ```bash
     composer update
     ```
 
-* Abra o Xampp e inicie o MYSQL
 * Feito isso! Rode o seguinte comando:
     ```bash
     php artisan migrate
@@ -64,6 +69,9 @@ Para utilizar você vai precisar seguir os seguintes passos:
     ```
 * Feito isso! Agora acesse a seguinte url: localhost:8000
 
+-- Obs: vale lembrar que todas as rotas são acessadas utlizando o prefixo /api/, por exemplo localhost:8000/api/clientes.
+    --- Exceto as rotas /sendmail e /report
+
 -------------------------------------------------
 
 <a id="tecnologias"></a>
@@ -71,9 +79,8 @@ Para utilizar você vai precisar seguir os seguintes passos:
 
 As seguintes ferramentas foram utilizadas na construção do projeto
 
-- [Boostrap v4.5.2](https://getbootstrap.com/)
 - [Composer v1.10.10](https://getcomposer.org/)
-- [jQuery v3.5.1](https://jquery.com/)
+- [Laravel](https://laravel.com/)
 
 -------------------------------------------------
 

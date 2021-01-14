@@ -52,7 +52,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/clientes?nome=Membro 2&cpf=3213213213&sexo=M&email=teste@teste.com",
+					"raw": "http://localhost:8000/api/clientes?nome=Jean Gabriel&cpf=0000000000&sexo=Masculino&email=cantanhede2000@hotmail.com",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -65,19 +65,19 @@
 					"query": [
 						{
 							"key": "nome",
-							"value": "Membro 2"
+							"value": "Jean Gabriel"
 						},
 						{
 							"key": "cpf",
-							"value": "3213213213"
+							"value": "0000000000"
 						},
 						{
 							"key": "sexo",
-							"value": "M"
+							"value": "Masculino"
 						},
 						{
 							"key": "email",
-							"value": "teste@teste.com"
+							"value": "cantanhede2000@hotmail.com"
 						}
 					]
 				}
@@ -90,7 +90,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/clientes/1?nome=testando",
+					"raw": "http://localhost:8000/api/clientes/1?nome=Cliente att",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,7 +104,7 @@
 					"query": [
 						{
 							"key": "nome",
-							"value": "testando"
+							"value": "Cliente att"
 						}
 					]
 				}
