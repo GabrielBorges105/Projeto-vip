@@ -68,11 +68,13 @@ Para utilizar você vai precisar seguir os seguintes passos:
     php artisan serve
     ```
 * Feito isso! Agora acesse a seguinte url: 
-    ```bash
-    localhost:8000
-    ```
+    
 
-    ### Obs: vale lembrar que todas as rotas são acessadas utlizando o prefixo /api/, por exemplo localhost:8000/api/clientes. Exceto as rotas /sendmail e /report
+    ### Obs: vale lembrar que todas as rotas são acessadas utlizando o prefixo /api/, por exemplo:
+    ```bash
+    localhost:8000/api/clientes
+    ```
+    ### Exceto as rotas /sendmail e /report
 
 -------------------------------------------------
 
