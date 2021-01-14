@@ -11,7 +11,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/api/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos"
+					]
 				}
 			},
 			"response": []
@@ -22,7 +31,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/api/produtos/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"3"
+					]
 				}
 			},
 			"response": []
@@ -33,7 +52,34 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/api/produtos?nome=Blusa&cor=Azul&tamanho=M&valor=17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Blusa"
+						},
+						{
+							"key": "cor",
+							"value": "Azul"
+						},
+						{
+							"key": "tamanho",
+							"value": "M"
+						},
+						{
+							"key": "valor",
+							"value": "17"
+						}
+					]
 				}
 			},
 			"response": []
@@ -44,7 +90,17 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/api/produtos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"1"
+					]
 				}
 			},
 			"response": []
@@ -55,7 +111,23 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/api/produtos/2?nome=Blusa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						"2"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Blusa"
+						}
+					]
 				}
 			},
 			"response": []
